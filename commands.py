@@ -37,4 +37,16 @@
 10. VIEW LOGS OF A CONTAINER:
     $ command :- docker logs <container_id or container_name>
 
+11. TO VIEW CONTENT OF A FILE IN A CONTAINER:
+    $ command :- cat file_name
+
+12. MOUNT .env ON A CONTAINER
+    $ command :- docker run --name name --env-file path/to/.env -p 8000:8000 image_name:tag
+
+13. copy FILES/CHANGES FROM REPO ON LOCAL INTO REPO ON DOCKER CONTAINER
+    $ command :- docker cp /path/on/host/file <container_name_or_id>:/path/to/container
+
+14. MOUNT FILES FROM REPO ON DOCKER CONTAINER INTO REPO ON LOCAL
+    $ command :- docker cp <container_name_or_id>:/path/to/container/file /path/on/host
+
 '''
