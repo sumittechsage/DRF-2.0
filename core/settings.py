@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     # packages
     'rest_framework',
     'rest_framework.authtoken',
+
+    # project apps
+   'middleware', 
 ]
 
 MIDDLEWARE = [
@@ -52,6 +55,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    # custom middlewares
+    'middleware.middlewares.MiddlewareHook1',
+    'middleware.middlewares.LoggingMiddleware',
+    'middleware.middlewares.OldStyleCustomMiddleware',
+    'middleware.middlewares.NewStyleCustomMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
