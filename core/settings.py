@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # project apps
    'middleware', 
+   'cookies',
 ]
 
 MIDDLEWARE = [
