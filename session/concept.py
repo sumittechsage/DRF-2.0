@@ -106,3 +106,65 @@
 
 => delete_test_cookie() - ! It deletes the test cookie. Use this to cleanup after verifying.           
 '''
+
+
+
+'''
+                               S E S S I O N   S E T T I N G S 
+                            - - - - - - - - - - - - - - - - - - - 
+
+
+#1. SESSION_CACHE_ALIAS - If you'are using cache-based session storage, this selects the cache to use. Deafult : 'default'
+
+#2. SESSION_COOKIE_AGE - ! The age of session cookies, in seconds. 
+                         ! Deafult: 1209600(2 weeks, in seconds)
+
+#3. SESSION_COOKIE_DOMAIN - ! The domain to use for session cookies. Set this to a string such as "example.com" for cross-domain cookies, or use None for a standard domain cookie.
+                            ! Be cautious when udating this setting on a production site. If you update this setting to enable cross-domain cookies on a site that previously used standard domain cookies, existing user cookies will be set to the old domain. This may result in them being unable to llog in as long as these cookies persist.
+                            ! Default: None
+
+#4. SESSION_COOKIE_HTTPONLY - ! Whether to use HttpOnly flag on the session cookie. If this is set to True, client-side JavaScript will not be able to access the seesion cookie.
+                              ! Default : True  
+
+#5. SESSION_COOKIE_NAME - ! The name of the cookie to use for sessions. This can be whatever you want(As long as it's different from the other cookie names in your application)
+                          ! Default : 'sessionid' 
+
+#6. SESSION_COOKIE_PATH - ! The path that should match in request.endpoint after the domain name. 
+                          ! e.g domain = "a.com" and path = '/app' 
+                                -- valid cookie urls :- "www.a.com/app", "abc.a.com/app/anything", "xyz.a.com/app/anyting" etc 
+                                -- invalid cookie urls :- "www.a.com/yy/app", "abc.a.com/somthing/app/anything", "xyz.a.com/anyting" etc 
+                                -- default :- '/'
+
+#7. SESSION_COOKIE_SAMESITE - a) strict :- will not allow javascript or cross sites to access the cookies.
+                            - b) lax :-   will allow  links with GET METHOD from anywhere but restrict other cross site requests.
+                            - c) None :- will allow all context even the cross sites.
+                            - Default :- lax
+
+#8. SESSION_COOKIE_SECURE - If  set to true the cookies will only be sent over https request not http or similar.
+                          - Default :- False
+
+#9. SESSION_ENGINE - Controls where django should store session data. OPtions are :-
+                        'django.contrib.sessions.backends.db'
+                        'django.contrib.sessions.backends.file'
+                        'django.contrib.sessions.backends.cache'
+                        'django.contrib.sessions.backends.cached_db'
+                        'django.contrib.sessions.backends.signed_cookies'
+
+                      Default :- 'django.contrib.sessions.backends.db'
+
+#10. SESSION_EXPIRE_AT_BROWSER_CLOSE - Whether to expire the session when the user closes their browser. 
+                                     - Default: False
+
+#11. SESSION_FILE_PATH - ! If you're using file-based session storage, this sets the firectory in which Django will store session data.
+                         ! Default = None : django will use standard tempprary dir.
+
+#12. SESSION_SAVE_EVERY_REQUEST - ! whether to save the session data on every request. If this is False(default), then the session data will only be saved if it has been midified.
+                                  ! default : False  
+
+
+#13. SESSION_SERIALIZER - ! Full import path of a serializer class to use for serializing session data.
+                        - ! Included serilaizer are:
+                        'django.contrib.sessions.serializers.PickleSerializer' 
+                        'django.contrib.sessions.serializers.JSONSerializer' 
+                        defualt :- 'django.contrib.sessions.serializers.JSONSerializer' 
+''' 
