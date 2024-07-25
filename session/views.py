@@ -55,3 +55,4 @@ def checksessionage(request):
     session.clear_expired()
     return JsonResponse({"message" : "session expiry checked"}, status = 200)
 
+
