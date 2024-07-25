@@ -58,10 +58,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
     # custom middlewares
-    'middleware.middlewares.MiddlewareHook1',
-    'middleware.middlewares.LoggingMiddleware',
-    'middleware.middlewares.OldStyleCustomMiddleware',
-    'middleware.middlewares.NewStyleCustomMiddleware',
+    # 'middleware.middlewares.MiddlewareHook1',
+    # 'middleware.middlewares.LoggingMiddleware',
+    # 'middleware.middlewares.OldStyleCustomMiddleware',
+    # 'middleware.middlewares.NewStyleCustomMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
