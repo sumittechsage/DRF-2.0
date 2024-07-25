@@ -56,3 +56,18 @@ def checksessionage(request):
     return JsonResponse({"message" : "session expiry checked"}, status = 200)
 
 
+def settestcookie(request):
+    request.session.set_test_cookie()
+    return JsonResponse({"message" : "set test cookie"}, status = 200)
+
+def checktestcookie(request):
+    if request.session.test_cookie_worked():
+        print("test cookies accepted")
+    else :
+        print("test cookies rejected")
+
+    return JsonResponse({"message" : "checked test cookie"}, status = 200)
+
+def deletetestcookie(request):
+    request.session.delete_test_cookie()
+    return JsonResponse({"message" : "deleted test cookie"}, status = 200)
