@@ -145,3 +145,11 @@ REST_FRAMEWROK = {
         'rest_framwork.authentication.TokenAuthentication',
     ]
 }
+
+
+# session
+SESSION_COOKIE_AGE = 400
+SESSION_COOKIE_NAME = 'sessionname'
+SESSION_COOKIE_PATH = '/session'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
