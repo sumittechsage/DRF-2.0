@@ -37,3 +37,21 @@ def flushsession(request):
     session = request.session
     session.flush()
     return JsonResponse({"message" : "session flushed"}, status = 200)
+
+
+def setsessionexpireage(request):
+    request.session['name'] = 'Session_name'
+    request.session.set_expiry(10)
+    return JsonResponse({"message" : "session set"}, status = 200)
+
+
+def checksessionage(request):
+    ''' SESSION EXPIRY DATE, AGE etc... '''
+    session = request.session
+    print("session_cookie_age ==>", session.get_session_cookie_age())
+    print("session_expiry_age ==>", session.get_expiry_age())
+    print("session_expiry_date ==>", session.get_expiry_date())
+    print("session_expiry_browser_close ==>", session.get_expire_at_browser_close())
+    session.clear_expired()
+    return JsonResponse({"message" : "session expiry checked"}, status = 200)
+

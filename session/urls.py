@@ -7,4 +7,6 @@ urlpatterns = [
     path('get/', views.getsession, name = "get-session"),
     path('delete/', views.deletesession, name = "delete-session"),
     path('flush/', views.flushsession, name = "flush-session"),
+    path('set-expires/', views.setsessionexpireage, name = "set-expires-session"),
+    path('expires/', views.checksessionage, name = "expires-session"),
 ]

@@ -73,6 +73,8 @@
 '''
                                 S E S S I O N   M E T H O D S 
                             - - - - - - - - - - - - - - - - - - - 
+                        
+                        !!! By default session expiry is of 2 weeks !!!
 
 => get_session_cookie_age() - It returns the age of session cookies, in seconds. Defaults to SESSION_COOKIE_AGE.
 
