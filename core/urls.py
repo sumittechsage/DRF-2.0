@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('middleware/', include("middleware.urls")),
     path('cookies/', include("cookies.urls")),
+    path('session/', include("session.urls")),
 ]
