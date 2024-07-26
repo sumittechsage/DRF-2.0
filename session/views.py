@@ -18,6 +18,7 @@ def setdefualtsession(request):
 def getsession(request):
     session= request.session
     name = session['name']
+    session.modified = True  # to reset expiry age of session 
     print("session =====>", session)
     print("name from session =====>", name)
     return JsonResponse({"message" : "session read"}, status = 200)

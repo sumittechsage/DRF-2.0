@@ -86,6 +86,9 @@
                         ! If the value is NOne session reverts to using the global session expiry policy.
                         ! Reading a session is not considered activity for expiration purposes. Session expiration is computed from the last time the session was modified.
 
+=> session.modified = True - Is used to refresh session or tell that session is modified so, please reset the expiry age, date wherever you want even at get request.
+                        
+
 => get_expiry_age() - ! It returns the number of seconds until this session expires. 
                       ! For sessions with no custom expiration (or those set to expire at browser close), this will equal SESSION_COOKIE_AGE
                       ! This function accepts two optinal keyword args:
