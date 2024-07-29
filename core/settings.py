@@ -47,13 +47,14 @@ INSTALLED_APPS = [
    'middleware', 
    'cookies',
    'session',
+   'manager',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -148,8 +149,8 @@ REST_FRAMEWROK = {
 
 
 # session
-SESSION_COOKIE_AGE = 400
-SESSION_COOKIE_NAME = 'sessionname'
-SESSION_COOKIE_PATH = '/session'
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_SAVE_EVERY_REQUEST = True
+# SESSION_COOKIE_AGE = 400
+# SESSION_COOKIE_NAME = 'sessionname'
+# SESSION_COOKIE_PATH = '/session'
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# SESSION_SAVE_EVERY_REQUEST = True
