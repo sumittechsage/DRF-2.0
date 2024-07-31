@@ -48,6 +48,7 @@ INSTALLED_APPS = [
    'cookies',
    'session',
    'manager',
+   'cache',
 ]
 
 MIDDLEWARE = [

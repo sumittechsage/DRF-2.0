@@ -23,4 +23,5 @@ urlpatterns = [
     path('cookies/', include("cookies.urls")),
     path('session/', include("session.urls")),
     path('manager/', include("manager.urls")),
+    path('cache/', include("cache.urls")),
 ]
